@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MapChoices_Example' do
+  pod 'MapChoices', :path => '../'
+
+  target 'MapChoices_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
