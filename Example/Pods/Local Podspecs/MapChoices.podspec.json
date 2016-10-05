@@ -1,0 +1,22 @@
+{
+  "name": "MapChoices",
+  "version": "0.1.0",
+  "summary": "A short description of MapChoices.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/MapChoices",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Cleber": "cleber.neto@ilegra.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/MapChoices.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MapChoices/Classes/**/*"
+}

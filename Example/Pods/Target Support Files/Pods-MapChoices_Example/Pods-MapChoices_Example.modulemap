@@ -1,0 +1,6 @@
+framework module Pods_MapChoices_Example {
+  umbrella header "Pods-MapChoices_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

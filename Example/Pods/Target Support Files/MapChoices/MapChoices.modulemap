@@ -1,0 +1,6 @@
+framework module MapChoices {
+  umbrella header "MapChoices-umbrella.h"
+
+  export *
+  module * { export * }
+}
