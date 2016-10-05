@@ -1,7 +1,7 @@
 import CoreLocation
 import UIKit
 
-class MapChoices {
+public class MapChoices {
     
     private static let WAZE = "Waze"
     private static let GOOGLEMAPS = "Google Maps"
@@ -12,7 +12,7 @@ class MapChoices {
         var url: NSURL
     }
     
-    internal static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
+    public static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
         let choicesAlert = UIAlertController(title: "Mapas", message: "Selecione uma opção de navegação", preferredStyle: .ActionSheet)
         
         getMapChoices(coordinate).forEach { choice in
@@ -20,6 +20,8 @@ class MapChoices {
                 UIApplication.sharedApplication().openURL(choice.url)
             }))
         }
+        
+        choicesAlert.addAction(UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil))
         
         viewController.presentViewController(choicesAlert, animated: true, completion: nil)
     }

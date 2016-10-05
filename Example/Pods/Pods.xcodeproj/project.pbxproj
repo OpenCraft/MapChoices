@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		0737C0F61C2FEC69E437C5610600AFE2 /* Pods-MapChoices_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBBF02913E077265DB03CFE414C8DAB /* Pods-MapChoices_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C83E8FF1FEAB198778BC1C83CE803EF /* MapChoices-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F765CACEA2CF313523082236272DE462 /* MapChoices-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A5565FFA0EBDE23EF482A8435DD9A23 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A8B004E00872EB1E4E569BDA850D6D /* ReplaceMe.swift */; };
 		44BCC55DA0C316394AE35ED117572039 /* Pods-MapChoices_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACECB0239C9D656F6D23323610F61C2C /* Pods-MapChoices_Example-dummy.m */; };
 		79C622DA7DCDDCB4CAE2D748BEDBBEED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		7A0DD8302B6C5A32D15A0B71E14E2648 /* Pods-MapChoices_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A9F759B6D313E73F858CC278833E2 /* Pods-MapChoices_Tests-dummy.m */; };
+		7D4F3919F3EB48DFD995CB24666C655A /* MapChoices-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09414251C81B9DF5CE3F749A30427563 /* MapChoices-dummy.m */; };
+		D65055F73E8BE5DA560926A2067DB8F2 /* MapChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C1A3E04780D1AC02E1C0AFEEEBDF7D /* MapChoices.swift */; };
 		E45603B6464C6E89B43FF704740F8F4B /* Pods-MapChoices_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEF4206DF1E0EBD4B4DC49215D81FEA /* Pods-MapChoices_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3656C65174D041D903E3408906C9777 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		F55EE05D2011A11B82F0B464471E63EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		F68DD4847783278CC0225942FF278795 /* MapChoices-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09414251C81B9DF5CE3F749A30427563 /* MapChoices-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		063BDCD8BF9D5664592B9AE82428473B /* MapChoices.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MapChoices.modulemap; sourceTree = "<group>"; };
 		09414251C81B9DF5CE3F749A30427563 /* MapChoices-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MapChoices-dummy.m"; sourceTree = "<group>"; };
+		13C1A3E04780D1AC02E1C0AFEEEBDF7D /* MapChoices.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MapChoices.swift; sourceTree = "<group>"; };
 		1B2A80DB29DCFE5E225B79485412CFC8 /* MapChoices-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MapChoices-prefix.pch"; sourceTree = "<group>"; };
 		2553E5A763E374329B43170C1C74562B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FBD68498572405F49E20095DB671FDD /* MapChoices.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MapChoices.xcconfig; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		55C7D4EA912F5561DFB75380B93A7D34 /* Pods-MapChoices_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapChoices_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6248880A4C05276F9F8B4153A073CE47 /* Pods-MapChoices_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapChoices_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		63930EC1211F1CFBDD88319F9A8B844A /* Pods-MapChoices_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MapChoices_Tests.modulemap"; sourceTree = "<group>"; };
-		66A8B004E00872EB1E4E569BDA850D6D /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		6DBBF02913E077265DB03CFE414C8DAB /* Pods-MapChoices_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapChoices_Example-umbrella.h"; sourceTree = "<group>"; };
 		7A9A9F759B6D313E73F858CC278833E2 /* Pods-MapChoices_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapChoices_Tests-dummy.m"; sourceTree = "<group>"; };
 		8237960CEC334D7A2B1A1B8BBAA51C14 /* Pods-MapChoices_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MapChoices_Example.modulemap"; sourceTree = "<group>"; };
@@ -92,14 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2323604A0092849A8C237E6857B44233 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				66A8B004E00872EB1E4E569BDA850D6D /* ReplaceMe.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +117,14 @@
 			);
 			name = MapChoices;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		7277E8A7CB7B2B11DBEC16897B0E9954 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				13C1A3E04780D1AC02E1C0AFEEEBDF7D /* MapChoices.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -181,7 +181,7 @@
 		A3F90AD6555738B22A86D00412626DB8 /* MapChoices */ = {
 			isa = PBXGroup;
 			children = (
-				2323604A0092849A8C237E6857B44233 /* Classes */,
+				7277E8A7CB7B2B11DBEC16897B0E9954 /* Classes */,
 			);
 			path = MapChoices;
 			sourceTree = "<group>";
@@ -274,7 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F93B43EBAAA58EE278F1421416B1E31 /* Build configuration list for PBXNativeTarget "MapChoices" */;
 			buildPhases = (
-				FF78D2880458F43B698BB4A8EB7F1E47 /* Sources */,
+				A149C51E0ED452F3081282869B9C19D2 /* Sources */,
 				B16D725736ACE61528F90354CE6E3315 /* Frameworks */,
 				77D43A688B27777B9F9741D56C9EF9E1 /* Headers */,
 			);
@@ -349,12 +349,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF78D2880458F43B698BB4A8EB7F1E47 /* Sources */ = {
+		A149C51E0ED452F3081282869B9C19D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F68DD4847783278CC0225942FF278795 /* MapChoices-dummy.m in Sources */,
-				3A5565FFA0EBDE23EF482A8435DD9A23 /* ReplaceMe.swift in Sources */,
+				7D4F3919F3EB48DFD995CB24666C655A /* MapChoices-dummy.m in Sources */,
+				D65055F73E8BE5DA560926A2067DB8F2 /* MapChoices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

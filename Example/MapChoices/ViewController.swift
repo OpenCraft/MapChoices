@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+import MapChoices
 
 class ViewController: UIViewController {
 
@@ -18,6 +20,12 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func showMapsDidTouch(sender: AnyObject) {
+        let testLocation = CLLocationCoordinate2D(latitude: 37.3314187, longitude: -122.0325976)
+        
+        MapChoices.presentMapChoicesInViewController(self, coordinate: testLocation)
     }
 
 }
