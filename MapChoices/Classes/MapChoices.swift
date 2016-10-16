@@ -13,7 +13,7 @@ public class MapChoices {
     }
     
     public static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
-        let choicesAlert = UIAlertController(title: "Mapas", message: "Selecione uma opção de navegação", preferredStyle: .ActionSheet)
+        let choicesAlert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
         
         getMapChoices(coordinate).forEach { choice in
             choicesAlert.addAction(UIAlertAction(title: choice.name, style: .Default, handler: { _ in
@@ -21,7 +21,7 @@ public class MapChoices {
             }))
         }
         
-        choicesAlert.addAction(UIAlertAction(title: "Cancelar", style: .Cancel, handler: nil))
+        choicesAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
         viewController.presentViewController(choicesAlert, animated: true, completion: nil)
     }
