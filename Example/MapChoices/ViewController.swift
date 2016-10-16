@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBAction func showMapsDidTouch(sender: AnyObject) {
         let testLocation = CLLocationCoordinate2D(latitude: 37.3314187, longitude: -122.0325976)
         
-        MapChoices.presentMapChoices(inViewController: self, coordinate: testLocation)
+        MapChoices.present(inViewController: self, coordinate: testLocation)
     }
 
 }

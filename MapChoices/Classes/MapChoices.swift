@@ -1,7 +1,7 @@
 import CoreLocation
 import UIKit
 
-public class MapChoices {
+public struct MapChoices {
     
     private static let WAZE = "Waze"
     private static let GOOGLEMAPS = "Google Maps"
@@ -14,10 +14,10 @@ public class MapChoices {
     
     @available(*, deprecated, message="Use presentMapChoices(inViewController:coordinate:) instead")
     public static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
-        presentMapChoices(inViewController: viewController, coordinate: coordinate)
+        present(inViewController: viewController, coordinate: coordinate)
     }
     
-    public static func presentMapChoices(inViewController viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
+    public static func present(inViewController viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
         let alert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
         
         getProviders(coordinate).forEach { provider in
