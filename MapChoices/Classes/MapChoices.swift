@@ -12,7 +12,12 @@ public class MapChoices {
         var url: NSURL
     }
     
+    @available(*, deprecated, message="Use presentMapChoices(inViewController:coordinate:) instead")
     public static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
+        presentMapChoices(inViewController: viewController, coordinate: coordinate)
+    }
+    
+    public static func presentMapChoices(inViewController viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
         let choicesAlert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
         
         getProviders(coordinate).forEach { provider in
