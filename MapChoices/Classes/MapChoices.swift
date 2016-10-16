@@ -18,17 +18,17 @@ public class MapChoices {
     }
     
     public static func presentMapChoices(inViewController viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
-        let choicesAlert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
+        let alert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
         
         getProviders(coordinate).forEach { provider in
-            choicesAlert.addAction(UIAlertAction(title: provider.name, style: .Default, handler: { _ in
+            alert.addAction(UIAlertAction(title: provider.name, style: .Default, handler: { _ in
                 UIApplication.sharedApplication().openURL(provider.url)
             }))
         }
         
-        choicesAlert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         
-        viewController.presentViewController(choicesAlert, animated: true, completion: nil)
+        viewController.presentViewController(alert, animated: true, completion: nil)
     }
     
     private static func getProviders(coordinate: CLLocationCoordinate2D) -> [Provider] {
