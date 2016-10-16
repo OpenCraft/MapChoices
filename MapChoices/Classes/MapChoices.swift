@@ -7,7 +7,7 @@ public class MapChoices {
     private static let GOOGLEMAPS = "Google Maps"
     private static let APPLEMAPS = "Apple Maps"
     
-    private struct MapChoice {
+    private struct Provider {
         var name: String
         var url: NSURL
     }
@@ -15,9 +15,9 @@ public class MapChoices {
     public static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
         let choicesAlert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
         
-        getMapChoices(coordinate).forEach { choice in
-            choicesAlert.addAction(UIAlertAction(title: choice.name, style: .Default, handler: { _ in
-                UIApplication.sharedApplication().openURL(choice.url)
+        getProviders(coordinate).forEach { provider in
+            choicesAlert.addAction(UIAlertAction(title: provider.name, style: .Default, handler: { _ in
+                UIApplication.sharedApplication().openURL(provider.url)
             }))
         }
         
@@ -26,29 +26,29 @@ public class MapChoices {
         viewController.presentViewController(choicesAlert, animated: true, completion: nil)
     }
     
-    private static func getMapChoices(coordinate: CLLocationCoordinate2D) -> [MapChoice] {
+    private static func getProviders(coordinate: CLLocationCoordinate2D) -> [Provider] {
         
-        var mapChoices = [MapChoice]()
+        var providers = [Provider]()
         
         if let appleMapsURL = NSURL(string: "http://maps.apple.com/?daddr=\(String(coordinate.latitude)),\(String(coordinate.longitude))") {
             if UIApplication.sharedApplication().canOpenURL(appleMapsURL) {
-                mapChoices.append(MapChoice(name: APPLEMAPS, url: appleMapsURL))
+                providers.append(Provider(name: APPLEMAPS, url: appleMapsURL))
             }
         }
         
         if let wazeURL = NSURL(string: "waze://?ll="+String(coordinate.latitude)+","+String(coordinate.longitude)+"&navigate=yes") {
             if UIApplication.sharedApplication().canOpenURL(wazeURL) {
-                mapChoices.append(MapChoice(name: WAZE, url: wazeURL))
+                providers.append(Provider(name: WAZE, url: wazeURL))
             }
         }
         
         if let googleMapsURL = NSURL(string: "comgooglemaps://?daddress="+String(coordinate.latitude)+","+String(coordinate.longitude)) {
             if UIApplication.sharedApplication().canOpenURL(googleMapsURL) {
-                mapChoices.append(MapChoice(name: GOOGLEMAPS, url: googleMapsURL))
+                providers.append(Provider(name: GOOGLEMAPS, url: googleMapsURL))
             }
         }
         
-        return mapChoices
+        return providers
         
     }
     
