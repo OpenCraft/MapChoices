@@ -1,60 +1,53 @@
 import CoreLocation
 import UIKit
 
-public struct MapChoices {
+public class MapChoices {
     
     private static let WAZE = "Waze"
     private static let GOOGLEMAPS = "Google Maps"
     private static let APPLEMAPS = "Apple Maps"
     
-    private struct Provider {
+    private struct MapChoice {
         var name: String
         var url: NSURL
     }
     
-    @available(*, deprecated, message="Use presentMapChoices(inViewController:coordinate:) instead")
     public static func presentMapChoicesInViewController(viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
-        present(inViewController: viewController, coordinate: coordinate)
-    }
-    
-    public static func present(inViewController viewController: UIViewController, coordinate: CLLocationCoordinate2D) {
-        let alert = UIAlertController(title: "Maps", message: "Choose a provider", preferredStyle: .ActionSheet)
+        let choicesAlert = UIAlertController(title: "Mapas", message: "Selecione uma opção de navegação", preferredStyle: .actionSheet)
         
-        getProviders(coordinate).forEach { provider in
-            alert.addAction(UIAlertAction(title: provider.name, style: .Default, handler: { _ in
-                UIApplication.sharedApplication().openURL(provider.url)
+        getMapChoices(coordinate: coordinate).forEach { choice in
+            choicesAlert.addAction(UIAlertAction(title: choice.name, style: .default, handler: { _ in
+                UIApplication.shared.openURL(choice.url as URL)
             }))
         }
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        choicesAlert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
         
-        viewController.presentViewController(alert, animated: true, completion: nil)
+        viewController.present(choicesAlert, animated: true, completion: nil)
     }
     
-    private static func getProviders(coordinate: CLLocationCoordinate2D) -> [Provider] {
+    private static func getMapChoices(coordinate: CLLocationCoordinate2D) -> [MapChoice] {
         
-        var providers = [Provider]()
+        var mapChoices = [MapChoice]()
         
         if let appleMapsURL = NSURL(string: "http://maps.apple.com/?daddr=\(String(coordinate.latitude)),\(String(coordinate.longitude))") {
-            if UIApplication.sharedApplication().canOpenURL(appleMapsURL) {
-                providers.append(Provider(name: APPLEMAPS, url: appleMapsURL))
+            if UIApplication.shared.canOpenURL(appleMapsURL as URL) {
+                mapChoices.append(MapChoice(name: APPLEMAPS, url: appleMapsURL))
             }
         }
         
         if let wazeURL = NSURL(string: "waze://?ll="+String(coordinate.latitude)+","+String(coordinate.longitude)+"&navigate=yes") {
-            if UIApplication.sharedApplication().canOpenURL(wazeURL) {
-                providers.append(Provider(name: WAZE, url: wazeURL))
+            if UIApplication.shared.canOpenURL(wazeURL as URL) {
+                mapChoices.append(MapChoice(name: WAZE, url: wazeURL))
             }
         }
         
         if let googleMapsURL = NSURL(string: "comgooglemaps://?daddress="+String(coordinate.latitude)+","+String(coordinate.longitude)) {
-            if UIApplication.sharedApplication().canOpenURL(googleMapsURL) {
-                providers.append(Provider(name: GOOGLEMAPS, url: googleMapsURL))
+            if UIApplication.shared.canOpenURL(googleMapsURL as URL) {
+                mapChoices.append(MapChoice(name: GOOGLEMAPS, url: googleMapsURL))
             }
         }
         
-        return providers
-        
+        return mapChoices
     }
-    
 }
