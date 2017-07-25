@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MapChoices'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = "A simple iOS library that let users choose which navigation should the app open."
 
 # This description is used to generate tags and improve search results.

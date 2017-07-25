@@ -12,10 +12,10 @@ import MapChoices
 
 class ViewController: UIViewController {
     
-    @IBAction func showMapsDidTouch(sender: AnyObject) {
+    @IBAction func showMapsDidTouch(_ sender: AnyObject) {
         let testLocation = CLLocationCoordinate2D(latitude: 37.3314187, longitude: -122.0325976)
         
-        MapChoices.present(inViewController: self, coordinate: testLocation)
+        MapChoices.present(in: self, coordinate: testLocation)
     }
 
 }

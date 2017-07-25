@@ -1,6 +1,5 @@
 # MapChoices
 
-[![CI Status](http://img.shields.io/travis/Cleber/MapChoices.svg?style=flat)](https://travis-ci.org/Cleber/MapChoices)
 [![Version](https://img.shields.io/cocoapods/v/MapChoices.svg?style=flat)](http://cocoapods.org/pods/MapChoices)
 [![License](https://img.shields.io/cocoapods/l/MapChoices.svg?style=flat)](http://cocoapods.org/pods/MapChoices)
 [![Platform](https://img.shields.io/cocoapods/p/MapChoices.svg?style=flat)](http://cocoapods.org/pods/MapChoices)
