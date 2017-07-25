@@ -11,6 +11,15 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+On iOS 9.0 and later, you need to add the following schemes to your Info.plist
+```xml
+<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>waze</string>
+		<string>comgooglemaps</string>
+	</array>
+```
+
 ## Installation
 
 MapChoices is available through [CocoaPods](http://cocoapods.org). To install
